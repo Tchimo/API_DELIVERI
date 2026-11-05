@@ -31,7 +31,7 @@ class Pedido(Base):
     preco = Column("preco", Float, nullable=False)
     usuario_id = Column("usuario_id", Integer, ForeignKey('usuarios.id'), nullable=False)
 
-    def __init__(self, usuario_id, status="Pendente", preco=0.0):
+    def __init__(self, usuario_id, status="PENDENTE", preco=0.0):
         self.usuario_id = usuario_id
         self.status = status
         self.preco = preco
