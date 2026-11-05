@@ -13,3 +13,4 @@ app = FastAPI()
 app.include_router(router_auth)
 app.include_router(router_order)
 
+#uvicorn main:app --reload

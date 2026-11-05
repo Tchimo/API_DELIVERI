@@ -48,3 +48,7 @@ class Item(Base):
         self.preco_unitario = preco_unitario
         self.quantidade = quantidade
         self.pedido_id = pedido_id
+
+
+        #alembic revision --autogenerate -m "Inicial migration" 
+        #alembic upgrade head

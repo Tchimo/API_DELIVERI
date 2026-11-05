@@ -8,16 +8,16 @@ class CadastroSchema(BaseModel):
     ativo: Optional[bool] = True
     admin: Optional[bool] = False
 
-    class config:
-        from_etributes = True  # Permite a criação de instâncias a partir de objetos ORM
-    
+    class Config:
+        from_attributes = True  # Permite a criação de instâncias a partir de objetos ORM
+
 
 class LoginSchema(BaseModel):
     email: EmailStr
     senha: str
 
-    class config:
-        from_etributes = True  # Permite a criação de instâncias a partir de objetos ORM
+    class Config:
+        from_attributes = True  # Permite a criação de instâncias a partir de objetos ORM
 
 
 class PedidoSchema(BaseModel):
@@ -25,5 +25,13 @@ class PedidoSchema(BaseModel):
     status: str = "Pendente"
     preco: float = 0.0
 
-    class config:
-        from_etributes = True  # Permite a criação de instâncias a partir de objetos ORM
+    class Config:
+        from_attributes = True  # Permite a criação de instâncias a partir de objetos ORM
+
+
+class ItemSchema(BaseModel):
+    preco_unitario: float
+    quantidade: int
+    
+    class Config:
+        from_attributes = True  # Permite a criação de instâncias a partir de objetos ORM

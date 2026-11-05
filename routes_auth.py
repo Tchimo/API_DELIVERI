@@ -34,7 +34,12 @@ async def register(dados: CadastroSchema, session: Session = Depends(get_session
     if usuario_existente:
         raise HTTPException(status_code=400, detail="Usuário já existe")
 
-    novo_usuario = Usuario(nome=dados.nome, email=dados.email, senha=bcrypt_context.hash(dados.senha))
+    novo_usuario = Usuario(nome=dados.nome,
+                           email=dados.email,
+                           senha=bcrypt_context.hash(dados.senha),
+                           ativo=dados.ativo,
+                           admin=dados.admin,
+                           )
     session.add(novo_usuario)
     session.commit()
     return {"message": "Cadastro realizado com sucesso"}

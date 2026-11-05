@@ -1,27 +1,3 @@
-fastapi
-uvicorn[standard]
-sqlalchemy
-passlib[bcrypt]
-bcrypt==4.0.1
-python-jose[cryptography]
-python-dotenv
-python-multipart
-alembic
-pydantic[email]
-
-
-fastapi                          # framework web para criar a API
-uvicorn[standard]                # servidor que executa a aplicação FastAPI
-sqlalchemy                       # ORM: acesso e modelagem do banco de dados
-passlib[bcrypt]                  # hash e verificação de senhas
-bcrypt==4.0.1                    # algoritmo de hash usado pelo passlib (versão fixada por compatibilidade)
-python-jose[cryptography]        # criação e validação de tokens JWT
-python-dotenv                    # carrega variáveis de ambiente do arquivo .env
-python-multipart                 # permite receber formulários (ex.: login OAuth2)
-alembic
-pydantic[email]
-
-
 alembic==1.15.2
 annotated-types==0.7.0
 anyio==4.9.0
