@@ -100,7 +100,9 @@ Exemplo de cadastro:
 {
   "nome": "Maria",
   "email": "maria@example.com",
-  "senha": "uma-senha-forte"
+  "senha": "uma-senha-forte",
+  "ativo":true,
+  "Admin":false(por padrão, pode alterar pra true se o usuário e admin)
 }
 ```
 
